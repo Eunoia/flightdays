@@ -30,9 +30,8 @@ class Flyday
 
     def price_range
       products = @blob['fareProducts']
-      max, min = products.minmax { |l| l['currencyPrice']['totalFareCents'] }
-      min = min['currencyPrice']['totalFareCents'] / 100
-      max = max['currencyPrice']['totalFareCents'] / 100
+      # Find minimum and maximum fare in dollars, excluding $0 fares, which are unavailable fares
+      min, max = (products.map{ |l| l['currencyPrice']['totalFareCents']/100 } - [0]).minmax
 
       "#{min}-#{max}"
     end

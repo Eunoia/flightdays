@@ -15,7 +15,7 @@ describe Flyday do
   describe '.inspect' do
     it 'contains data about a flight' do
       ts = '2016-07-01T05:25'
-      s = "<#Flyday::Flight MDW->ATL #{ts} seats:24, price_range:220-342>"
+      s = "<#Flyday::Flight MDW->ATL #{ts} seats:24, price_range:220-358>"
       expect(@flight.inspect).to eq(s)
     end
   end
@@ -29,7 +29,7 @@ describe Flyday do
     it 'returns when the plane lands at' do
       expect(@flight.land_at).to eq('2016-07-01T08:10')
     end
-    
+
   end
   describe '.flatten' do
     it 'returns a direct flight in an array' do
