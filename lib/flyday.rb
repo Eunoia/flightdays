@@ -28,7 +28,7 @@ class Flyday
 
   def headers
     {
-      'X-API-Key' => 'l7xx8d8bfce4ee874269bedc02832674129b',
+      'X-API-Key' => 'l7xx12ebcbc825eb480faa276e7f192d98d1',
       'Content-Type' => 'application/vnd.swacorp.com.accounts.login-v1.0+json',
       'User-Agent' => 'Southwest/3.1.100 (iPad; iOS 8.3; Scale/2.00)'
     }
